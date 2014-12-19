@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">QRW100S</string>
+    <string name="action_settings">Settings</string>
+    <string name="null_string">null</string>
+    <string name="fps_">FPS:</string>
+    <string name="frames_">Frames:</string>
+    <string name="_0">0</string>
+
+</resources>

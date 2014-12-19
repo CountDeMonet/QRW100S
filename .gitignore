@@ -24,3 +24,13 @@ proguard/
 
 # Log Files
 *.log
+
+# IDE stuff
+/.idea/workspace.xml
+/.idea/libraries
+
+# OSX stuff
+.DS_Store
+
+# Windows stuff
+Thumbs.db
