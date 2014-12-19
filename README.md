@@ -4,12 +4,12 @@ QRW100S
 High Performance MJPEG viewer with support for Google Glass. Built to run against a Walkera QRW100S Quadcopter (iOS version)
 
 To enable support for Google Glass set this parameter to true in MainActivity.java
-	
-	private final boolean forGlass = false;
+
+private final boolean forGlass = false;
 
 and set the compile SDK in build.gradle to
-	
-	compileSdkVersion 'Google Inc.:Glass Development Kit Preview:19'
+
+compileSdkVersion 'Google Inc.:Glass Development Kit Preview:19'
 	
 To build for standard android set forGlass to false and set the sdk version to the latest android sdk, at the moment 21.
  
