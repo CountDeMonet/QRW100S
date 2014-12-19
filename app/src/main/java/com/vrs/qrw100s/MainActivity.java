@@ -35,7 +35,7 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 public class MainActivity extends Activity {
-    // to benchmark the network and display FPS overlay set to true and recompile
+    // to benchmark the network and display FPS instead of frames set to true and recompile
 	private final boolean benchmarkNetwork = false;
 
     // To enable support for Google Glass set this parameter to true and set the compile SDK to

@@ -38,14 +38,13 @@ class NetworkReader extends Thread{
 	private static final String TAG = "NetworkReader";
 	private final Handler mainHandler;
 
-    public volatile Object lock;
 	private byte[] curFrame;
 
     private final String myURL;
 	
 	private boolean skipFrame = false;
 	private int skipNum = 0;
-	private int frameDecrement = 2;
+	private int frameDecrement = 1;
 	
 	// this udp server only receives messages. 
 	public NetworkReader( Handler myHandler, String url, boolean isGlass ){
@@ -100,13 +99,10 @@ class NetworkReader extends Thread{
 				
 				if (prev == 0xFF && cur == 0xD9) {		
 					if( !skipFrame ){
-                        synchronized (lock) {
-                            synchronized (curFrame) {
-                                curFrame = jpgOut.toByteArray();
-                                lock = curFrame;
-                            }
+                        synchronized (curFrame) {
+                            curFrame = jpgOut.toByteArray();
                         }
-						
+
 						skipFrame = true;
 						
 						Message threadMessage = mainHandler.obtainMessage();
